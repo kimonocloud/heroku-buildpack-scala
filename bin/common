@@ -260,6 +260,7 @@ run_sbt()
   JAVA_OPTS="$JAVA_OPTS -Duser.home=$home"
   JAVA_OPTS="$JAVA_OPTS -Divy.default.ivy.user.dir=$home/.ivy2"
   JAVA_OPTS="$JAVA_OPTS -Dsbt.global.base=$home"
+  JAVA_OPTS="$JAVA_OPTS -Dkimono_version=$KIMONO_VERSION"
 
   if [ "$javaVersion" = "1.7" ] || [ "$javaVersion" = "1.6" ]; then
     JAVA_OPTS="$JAVA_OPTS -XX:MaxPermSize=512M"
